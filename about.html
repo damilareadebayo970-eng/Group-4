@@ -1,56 +1,135 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
-    <script src="./tailwind.js"></script>
-  </head>
-  <body class="min-h-screen bg-white text-[#17152b] font-[Arial,sans-serif]">
-    <header
-      class="relative z-[5] grid min-h-[76px] grid-cols-[1fr_auto_1fr] items-center border-b border-[#eceaf5] bg-white px-[6%] max-[700px]:grid-cols-[1fr_auto] max-[700px]:gap-4 max-[700px]:px-[5%]"
-    >
-      <a
-        class="text-xl font-bold tracking-[0.08em] text-[#42b354] no-underline"
-        href="#home"
-        aria-label="Home"
-        >GF</a
-      >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="tailwind.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-      <nav
-        class="flex gap-8 max-[700px]:col-span-2 max-[700px]:row-start-2 max-[700px]:justify-center max-[700px]:flex-wrap max-[700px]:gap-x-5 max-[700px]:gap-y-3"
-        aria-label="Main navigation"
-      >
-        <a
-          class="relative text-[0.95rem] text-[#17152b] no-underline after:absolute after:bottom-[-0.55rem] after:left-0 after:right-0 after:h-[3px] after:rounded-full after:bg-[#42b354] after:opacity-0 after:content-[''] after:transition-opacity focus-visible:text-[#42b354] focus-visible:after:opacity-100 hover:text-[#42b354]"
-          href="#home"
-          >Home</a
-        >
-        <a
-          class="relative text-[0.95rem] text-[#17152b] no-underline after:absolute after:bottom-[-0.55rem] after:left-0 after:right-0 after:h-[3px] after:rounded-full after:bg-[#42b354] after:opacity-0 after:content-[''] after:transition-opacity focus-visible:text-[#42b354] focus-visible:after:opacity-100 hover:text-[#42b354]"
-          href="#about"
-          >About</a
-        >
-        <a
-          class="relative text-[0.95rem] text-[#17152b] no-underline after:absolute after:bottom-[-0.55rem] after:left-0 after:right-0 after:h-[3px] after:rounded-full after:bg-[#42b354] after:opacity-0 after:content-[''] after:transition-opacity focus-visible:text-[#42b354] focus-visible:after:opacity-100 hover:text-[#42b354]"
-          href="#products"
-          >Products</a
-        >
-        <a
-          class="relative text-[0.95rem] text-[#17152b] no-underline after:absolute after:bottom-[-0.55rem] after:left-0 after:right-0 after:h-[3px] after:rounded-full after:bg-[#42b354] after:opacity-0 after:content-[''] after:transition-opacity focus-visible:text-[#42b354] focus-visible:after:opacity-100 hover:text-[#42b354]"
-          href="#benefits"
-          >Benefits</a
-        >
-        <a
-          class="relative text-[0.95rem] text-[#17152b] no-underline after:absolute after:bottom-[-0.55rem] after:left-0 after:right-0 after:h-[3px] after:rounded-full after:bg-[#42b354] after:opacity-0 after:content-[''] after:transition-opacity focus-visible:text-[#42b354] hover:text-[#42b354]"
-          href="#contact"
-          >Contact</a
-        >
-      </nav>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
 
-      <a
-        class="justify-self-end rounded-full bg-[#42b354] px-[1.35rem] py-3 text-[0.95rem] font-semibold text-white no-underline hover:bg-[#42b354] focus-visible:bg-[#42b354]"
-        href="#sign-up"
-        >Sign up</a
-      >
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 48px;
+            border-bottom: 1px solid #e8e8e8;
+        }
+
+        .logo {
+            color: #222;
+            font-size: 24px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        nav {
+            display: flex;
+            gap: 28px;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #42b354;
+        }
+
+        .sign-up {
+            padding: 11px 22px;
+            border: 0;
+            border-radius: 999px;
+            background-color: #42b354;
+            color: #fff;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        @media (max-width: 700px) {
+            header {
+                flex-wrap: wrap;
+                gap: 18px;
+                padding: 18px 24px;
+            }
+            nav {
+                order: 3;
+                width: 100%;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 14px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a class="logo" href="#">GF</a>
+        <nav aria-label="Main navigation">
+            <a href="home.html">Home</a>
+            <a href="#about">About</a>
+            <a href="#products">Products</a>
+            <a href="#benefits">Benefits</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <button class="sign-up" type="button">Sign Up</button>
     </header>
+    <main>
+        <section class="flex items-center justify-center">
+            <div>
+                 <h1 class="text-3xl font-bold mb-4 mt-1``0 px-20">Committed to elevating <br> agricultural awareness</h1>
+                  <p class="text-2xl mt-10 px-20">we were inspired by <br> economy's effect of <br> agriculture in Nigerian <br> economy </p>
+                </div>
+                <img src="photo-1529313780224-1a12b68bed16.jpeg" alt="Green lifestyle and team photboo"class="w-150 mb-10 mt-10 px-20 p-10 w-1140px rder-b border-[black]"/>
+        </section>
+        <section>
+            <hr class="border-t border-black-300">
+            <h1 class="text-center font-bold text-3xl mt-5">Core value</h1>
+            <div class="flex mb-10">
+
+                <img src="frame 111.png" alt="" class="mt-10 px-20">
+                <img src="sheep.png" alt="" class="mt-10 px-15">
+                <img src="water leaf.png" alt="" class="mt-10 px-20">
+              
+            </div>
+            <ul class="text-3xl font-bold px-10">
+                <li>-serving customer right</li>
+                <li>-showing the beauty in agriculture</li>
+                <li>-outline the power of agriculture</li>
+            </ul>
+            <div><button class="bg-green-600 m-20 px-15 cursor-pointer rounded-3xl text-white h-15 font-bold text-2xl">see more</button></div>
+        </section>
+       <hr class="mt-2">
+           <section>
+             <div class="flex mb-10">
+            <img src="Frame 116.png" alt="" class="mt-15 px-19">
+            <img src="frame 119.png" alt="" class="mt-15 px-15">
+            <img src="frame 118.png" alt="" class="mt-15 px-15">
+             </div>
+             <p class="text-3xl font-bold text-center text-black">THE BEAUTY OF AGRICULTURE</p>
+           </section>
+           <hr class="mt-2">
+           <section class="bg-[#0D0E1A] rounded-3xl mt-10 mb-10 ml-10 mr-10 flex mt-[30px]">
+            <div class="text-center text-white h-100 px-20">
+                <img src="bbb.png" alt="" class="px-4 py-8">
+                </div>
+                <div>
+                    <h1 class="text-white font-bold px-20 mb-5">navigation</h1>
+                    <p class="text-[#8B8FA8]">home</p>
+                     <p class="text-[#8B8FA8]">about</p>
+                     <p class="text-[#8B8FA8]">benefits</p>
+                     <p class="text-[#8B8FA8]">products</p>
+                </div>
+           </section>
+    </main>
+</body>
+</html>
